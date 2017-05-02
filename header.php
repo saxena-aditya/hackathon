@@ -43,9 +43,9 @@
                 <button type="submit" class="btn btn-default">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li ><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; Global Projects</a></li>
+                <li ><a href="global.php"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; Global Projects</a></li>
                 <li>
-                    <a href="#">
+                    <a href="login.php">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
                     </a>
                 </li>
