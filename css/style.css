@@ -26,3 +26,66 @@ ul.errorlist > li {
 .glyphicon-star.active {
     color: #FDB230;
 }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+/* The navigation menu links */
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+.row_custom{
+  margin-right:0px;
+margin-left: 0px;
+}
+.projects{
+  background-image: url("../images/pattern2.png");
+}
+.button {
+    display:block;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+.addbutton {
+  display:block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+
+}
+.gpadding{
+  margin-top: -16px;
+  padding: 20px;
+  font-size: 62px;
+  margin-left: -8px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
