@@ -75,39 +75,38 @@ if(isset($_GET['project_id'])){
         </div>
               <div class="col-sm-12 col-md-12">
               <div class="panel-group" id="accordion">
-               	<?php
-               		if ($data_fetched){
+             <?php
+               	if ($data_fetched){
                     $i = 0 ;
-               			while ($rows = mysqli_fetch_array($sql_Res, MYSQLI_ASSOC)) {
-               				?>
-               				 
-							  <div class="panel panel-default">
-							    <div class="panel-heading">
-							      <h4 class="panel-title">
-							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$i?>">
-							        <?=$rows['project_title']?></a>
-							      </h4>
-							    </div>
-							    <div id="collapse<?=$i?>" class="panel-collapse collapse">
-							      <div class="panel-body">
-                      <div class="description">
-                        <?=$rows['details']?>
-                      </div>
-                        <div class="lower-region">
-                            <a href="global?project_id=<?=$rows['project_id']?>" class="btn btn-success">CollabNOW</a>
-                        </div>
-                    </div>
-							    </div>
-							  </div>
-                
-						<?php
-               			$i = $i+1;
-               			}
-               		}
-
-                  mysqli_close($connect_link);
-               	?>
-</div>
-               </div>
-      </div>
+            		while ($rows = mysqli_fetch_array($sql_Res, MYSQLI_ASSOC)) {
+               		?>
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$i?>">
+                <?=$rows['project_title']?>
+              </a>
+            </h4>
+          </div>
+          <div id="collapse<?=$i?>" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="description">
+                <?=$rows['details']?>
+              </div>
+              <div class="lower-region">
+                <a href="global?project_id=<?=$rows['project_id']?>" class="btn btn-success">CollabNOW
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php
+            $i = $i+1;
+         }
+       }
+	 mysqli_close($connect_link);
+      ?>
+   </div>
+  </div>
+ </div>
 </div>
