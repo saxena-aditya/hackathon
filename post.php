@@ -38,16 +38,8 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
       echo mysqli_error($connect_link);
       echo $sql;
     }
-
   }
-
-
-}
-
-
-
-
- ?>
+} ?>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
